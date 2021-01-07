@@ -1,10 +1,16 @@
 import React from 'react'
+import { Route, Switch } from "react-router"
+import { Calendar } from "./templates"
+
 
 const Router = () => {
   return (
-    <div>
-      
-    </div>
+    
+      <Switch>
+        <Route exact path={"(/)?"} component={Calendar} />
+      </Switch>
+    
+    
   )
 }
 
