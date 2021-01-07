@@ -1,11 +1,8 @@
-import express from 'express';
+import express from "express";
+import { createMeal } from "../controller/meal";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/meal/all', (req, res) => {
-  res.json({
-    data: "hello Team A!!! from meal all"
-  })
-})
+router.get("/meal/all", createMeal);
 
-export default router
+export default router;

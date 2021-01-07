@@ -3,8 +3,8 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
-import { PORT, DATABASE, defaultPath } from '../config'
-import MealRouter from '../routes/meal'
+import { PORT, DATABASE, defaultPath } from './config'
+import MealRouter from './routes/meal'
 
 //app
 const app = express()
