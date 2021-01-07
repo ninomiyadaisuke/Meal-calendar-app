@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
-import {PORT, DATABASE} from '../config'
+import { PORT, DATABASE, defaultPath } from './config'
+import MealRouter from './routes/meal'
 
 //app
 const app = express()
@@ -26,11 +27,8 @@ app.use(bodyParser.json({ limit: "2mb" }))
 app.use(cors())
 
 //routes
-app.get('/api/v1', (req, res) => {
-  res.json({
-    data: "hello Team A!!!"
-  })
-})
+app.use(defaultPath, MealRouter)
+
 
 //port
 const port = PORT || 8000
