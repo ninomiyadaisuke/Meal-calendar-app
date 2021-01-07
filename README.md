@@ -2,15 +2,6 @@
 
 ### DB設計
 
-USER  
-
-|Collection|Type|option|
-|------|----|------|
-|name|String|require:true|
-|email|String|require:true|
-|role|String|require:true|
-|userList|Array|default:[]|
-
 
 MEAL
 
