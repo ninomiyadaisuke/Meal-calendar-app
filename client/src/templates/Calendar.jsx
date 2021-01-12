@@ -1,10 +1,23 @@
 import React from 'react'
+import { PrimaryButton } from "../components/UIkit"
+import { useAuth0 } from "@auth0/auth0-react"
 
 const Calendar = () => {
+  const { isAuthenticated, logout, user } = useAuth0()
+  
   return (
-    <div>
-      <h1>カレンダーページです</h1>
-    </div>
+    isAuthenticated && (
+    <>
+        <div>
+          <img src={user.picture}/>
+        <h1>カレンダーページです</h1>
+      </div>
+      <PrimaryButton
+        label={"ログアウト"}
+        onClick={() => logout()}
+      /> 
+    </>
+    )
   )
 }
 
