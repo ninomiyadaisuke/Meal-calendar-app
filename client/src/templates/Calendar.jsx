@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrimaryButton } from "../components/UIkit"
 import { useAuth0 } from "@auth0/auth0-react"
+import { push } from "connected-react-router"
 
 const Calendar = () => {
   const { isAuthenticated, logout, user } = useAuth0()
@@ -14,7 +15,7 @@ const Calendar = () => {
       </div>
       <PrimaryButton
         label={"ログアウト"}
-        onClick={() => logout()}
+          onClick={() => logout()}
       /> 
     </>
     )
