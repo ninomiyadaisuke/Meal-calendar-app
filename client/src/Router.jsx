@@ -1,16 +1,21 @@
 import React from 'react'
 import { Route, Switch } from "react-router"
-import { Calendar } from "./templates"
-import { BuyList } from "./templates"
+import { BuyList, Calendar, UserList, Login } from "./templates"
+
+import ProtectedRoute from "./ProtectedRoute"
 
 
 const Router = () => {
   return (
     
-      <Switch>
-        <Route exact path={"(/)?"} component={Calendar} />
-        <Route exact path={"/buylist"} component={BuyList} />
-      </Switch>
+
+      
+    <Switch>
+      <ProtectedRoute exact path={"/login"} component={Login} />
+      <ProtectedRoute exact path={"(/)?"} component={Calendar} />
+      <Route exact path={"(/user)"} component={UserList} />
+      <Route exact path={"/buylist"} component={BuyList} />
+    </Switch>
     
     
   )

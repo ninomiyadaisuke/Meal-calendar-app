@@ -1,26 +1,35 @@
 import { Schema, model } from "mongoose";
-import IMeal from "../documents/mealDocument";
 
 const mealSchema: Schema = new Schema({
-	day: {
-		type: Date,
+	main: {
+		type: String,
 		required: true,
 	},
-	menu: {
-		type: Array,
+	rice: {
+		type: String,
 		required: true,
 	},
+	soup: {
+		type: String,
+	},
+	sideMenu1: String,
+	sideMenu2: String,
+	sideMenu3: String,
 	userCount: {
 		type: Number,
-		//required: true,
 		default: 0,
 	},
 	shopping: {
-		type: Array,
-		default: [String],
+		type: [
+			{
+				item: String,
+				count: Number,
+			},
+		],
+		default: [],
 	},
 });
 
-const Meal = model<IMeal>("Meal", mealSchema);
+const Meal = model("Meal", mealSchema);
 
 export default Meal;
