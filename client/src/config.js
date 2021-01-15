@@ -1,0 +1,1 @@
+export const VALIDATION_EMAIL="maeda-g.co.jp"
