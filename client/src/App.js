@@ -1,9 +1,9 @@
-import Router from "./Router"
+import AppRouter from "./router/AppliRouter"
 import "./assets/style.css"
 
 function App() {
   return (
-    <Router/>
+    <AppRouter/>
   );
 }
 
