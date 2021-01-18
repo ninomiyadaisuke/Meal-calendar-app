@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import {ObjectId} from 'mongodb'
 
 const mealSchema: Schema = new Schema({
 	main: {
@@ -19,15 +20,10 @@ const mealSchema: Schema = new Schema({
 		type: Number,
 		default: 0,
 	},
-	shopping: {
-		type: [
-			{
-				item: String,
-				count: Number,
-			},
-		],
-		default: [],
-	},
+	// shopping: {
+	// 	type: ObjectId,
+	// 	ref: "Shopping"
+	// 	},
 });
 
 const Meal = model("Meal", mealSchema);

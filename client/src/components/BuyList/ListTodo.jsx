@@ -10,7 +10,9 @@ export const ListTodo = (props) => {
                         return (
                             <div key={todo} >
                                 <li>{todo}</li>
-                                <button onClick={() => onClickDelete(index) }>削除</button>
+                                <button onClick={() => onClickDelete(index)}>削除</button>
+                                
+                                
                             </div>
                         );
                     })}
