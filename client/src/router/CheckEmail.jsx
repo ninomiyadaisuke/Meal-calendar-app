@@ -9,8 +9,7 @@ const CheckEmail = () => {
   const userEmail = user.email
   const emailDomain = userEmail.split("@")[1]
   const varidation = VALIDATION_EMAIL
-  console.log(emailDomain);
-  console.log(varidation);
+  localStorage.setItem("user",emailDomain)
   if (emailDomain === varidation) {
     return <Calendar/>
   } else {

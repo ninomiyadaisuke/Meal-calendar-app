@@ -5,9 +5,10 @@ import { push } from "connected-react-router"
 
 const Calendar = () => {
   const { isAuthenticated, logout, user } = useAuth0()
-  const userEmail = user.email
-  const emailDomain = userEmail.split("@")[1]
-  console.log(emailDomain);
+  const sessionLogout = () => {
+    localStorage.removeItem("user")
+    logout()
+  }
   
   return (
     isAuthenticated && (
@@ -19,7 +20,7 @@ const Calendar = () => {
       </div>
       <PrimaryButton
         label={"ログアウト"}
-          onClick={() => logout()}
+          onClick={() => sessionLogout()}
       /> 
     </>
     )
