@@ -12,3 +12,4 @@ MEAL
 |shopping|Array|default: []|
 |day|Date|require: true|
 
+<!-- test -->
