@@ -9,7 +9,8 @@ const appRouter = () => {
   return (
     <Router>
       <Switch>
-          <Route exact path={"(/)?"} component={CalendarTest} />
+        <ProtectedRoute exact path={"(/)?"} component={Calendar} />
+        <ProtectedRoute exact path={"/login"} component={Login} />
       </Switch>
 
       {/* 本番環境のルートです 消さないでください*/}
