@@ -3,7 +3,7 @@ import React from 'react'
 const CalendarTest = () => {
   return (
     <div>
-      <h1>カレンダーページです</h1>
+      <h1>CalendarPageです</h1>
     </div>
   )
 }
