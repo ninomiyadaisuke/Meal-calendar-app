@@ -14,7 +14,7 @@ const Login = () => {
     return (
       <div className="center">
         <PrimaryButton
-          label={"Googleアカウントでログイン"}
+          label={"Googleアカウントでログインしてください"}
           onClick={() => loginWithRedirect()}
         />
       </div>
