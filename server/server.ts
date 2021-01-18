@@ -5,6 +5,7 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import { PORT, DATABASE, defaultPath } from "./config";
 import MealRouter from "./routes/meal";
+import ShoppingRouter from "./routes/shopping";
 
 //app
 const app = express();
@@ -27,6 +28,7 @@ app.use(cors());
 
 //routes
 app.use(defaultPath, MealRouter);
+app.use(defaultPath, ShoppingRouter);
 
 //port
 const port = PORT || 8000;
